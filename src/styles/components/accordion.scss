@@ -1,6 +1,8 @@
 @use "../helpers" as *;
 
 .landing-accordion {
+  padding-top: fluid(40, 70);
+
   &__container {
   }
 
