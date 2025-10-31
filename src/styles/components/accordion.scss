@@ -1,0 +1,122 @@
+@use "../helpers" as *;
+
+.landing-accordion {
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: fluid(32, 50);
+    text-align: center;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20);
+
+    @include large {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+  }
+
+  &__item {
+    padding: rem(24) rem(20);
+    border-radius: rem(8);
+    border: 1px solid #e2e6eb;
+    background-color: #fff;
+  }
+
+  &__button {
+    width: 100%;
+    color: var(--primaty-color);
+    font-size: fluid(20, 28);
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding-block: rem(20);
+    margin-block: rem(-20);
+    column-gap: rem(16);
+
+    &.is-active {
+      .landing-accordion__button-icon {
+        span {
+          &:last-child {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fluid(24, 32);
+    height: fluid(24, 32);
+    position: relative;
+    flex-shrink: 0;
+
+    span {
+      background-color: var(--secondary-color);
+      border-radius: rem(4);
+      width: 100%;
+      height: rem(6);
+      transition: all 0.3s ease;
+
+      &:last-child {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+
+  &__panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  &__panel-content {
+    padding-top: rem(14);
+    color: var(--primaty-color);
+    font-size: fluid(16, 18);
+    line-height: 1.2;
+    padding-right: rem(40);
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    @include large {
+      flex-direction: row;
+    }
+
+    @include small {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
