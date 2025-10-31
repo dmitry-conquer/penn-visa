@@ -1,0 +1,62 @@
+@use "../helpers" as *;
+
+.landing-video {
+  margin: fluid(40, 70) 0 rem(40) 0;
+
+  &__container {
+  }
+
+  &__row {
+    display: flex;
+    column-gap: fluid(20, 195);
+    align-items: center;
+    padding: fluid(20, 60) !important;
+    border-radius: rem(16);
+    border: 1px solid #e2e6eb;
+    background: #fff;
+    overflow: hidden;
+
+    @include medium {
+      flex-direction: column-reverse;
+      row-gap: rem(24);
+    }
+  }
+
+  &__video {
+    flex: 0 1 rem(561);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+
+    video {
+      width: 100%;
+      height: rem(425);
+      object-fit: cover;
+
+      @include medium {
+        height: auto;
+      }
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(584);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__title {
+  }
+
+  &__description {
+    color: var(--primaty-color);
+    font-size: fluid(16, 18);
+    line-height: 1.2;
+  }
+}

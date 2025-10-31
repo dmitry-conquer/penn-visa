@@ -1,0 +1,61 @@
+@use "helpers" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.flexible-landing {
+  --primaty-color: #0d5ca6;
+  --secondary-color: #fdbd3d;
+  --dark-color: #052742;
+
+  font-family: "Inter", sans-serif;
+  background-color: #f7f5f4;
+
+  .landing-container {
+    max-width: rem(1660);
+    padding: 0 rem(20);
+    margin: 0 auto;
+  }
+
+  .landing-button {
+    padding: rem(17) rem(24);
+    background-color: var(--secondary-color);
+    border-radius: rem(8);
+    color: var(--dark-color);
+    text-align: center;
+    font-size: rem(14);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.44px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    @include hover {
+      border-color: var(--dark-color);
+    }
+
+    &--transparent {
+      border-radius: rem(8);
+      border: 1px solid var(--dark-color);
+      background-color: transparent;
+
+      @include hover {
+        background-color: var(--dark-color);
+        color: #fff;
+      }
+    }
+  }
+
+  .landing-heading-large,
+  .landing-heading-medium,
+  .landing-heading-small {
+    color: var(--primaty-color);
+    line-height: 1;
+    font-weight: 700;
+  }
+  .landing-heading-large {
+    font-size: fluid(36, 60);
+  }
+  .landing-heading-medium {
+  }
+  .landing-heading-small {
+  }
+}
