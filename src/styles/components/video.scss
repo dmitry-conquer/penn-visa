@@ -4,6 +4,19 @@
   margin: fluid(40, 70) 0 rem(40) 0;
 
   &__container {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+
+    @include x-large {
+      display: none;
+    }
   }
 
   &__row {
@@ -45,6 +58,8 @@
     display: flex;
     flex-direction: column;
     row-gap: rem(24);
+    position: relative;
+    z-index: 2;
 
     @include medium {
       flex: 0 1 auto;

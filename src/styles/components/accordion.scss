@@ -45,6 +45,8 @@
     padding-block: rem(20);
     margin-block: rem(-20);
     column-gap: rem(16);
+    border: none;
+    background-color: transparent;
 
     &.is-active {
       .landing-accordion__button-icon {
