@@ -65,6 +65,9 @@
     position: absolute;
     right: 0;
     top: rem(-32);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 
     @include hover {
       svg {
@@ -122,7 +125,7 @@
     padding: rem(17) rem(24);
     background-color: #fdbd3d;
     border-radius: rem(8);
-    color: #052742;
+    color: #052742 !important;
     text-align: center;
     font-size: rem(14);
     font-weight: 600;

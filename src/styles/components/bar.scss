@@ -1,0 +1,52 @@
+@use "../helpers/" as *;
+
+.info-bar {
+  width: 100%;
+  padding: fluid(3, 10) 0;
+  background-color: #fdbd3d;
+
+  &__container {
+    max-width: rem(1652);
+    margin: 0 auto;
+    padding: 0 rem(16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: fluid(12, 32);
+  }
+
+  &__text {
+    color: #0d5ca6;
+    font-size: fluid(13, 24);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  &__button {
+    color: #0d5ca6;
+    font-size: fluid(13, 24);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    column-gap: fluid(12, 24);
+    &:hover {
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2229%22%20viewBox%3D%220%200%2048%2029%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M36.857%2029H22l10.214-14.968L22%200h14.857L48%2014.032z%22%20fill%3D%22%230D5CA6%22%2F%3E%3Cpath%20d%3D%22M14.857%2029H0l10.214-14.968L0%200h14.857L26%2014.032z%22%20fill%3D%22%230D5CA6%22%2F%3E%3C%2Fsvg%3E");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      width: fluid(24, 48);
+      height: rem(29);
+    }
+  }
+}
